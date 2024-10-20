@@ -1,4 +1,5 @@
-Croma Competitive Intelligence Chatbot:
+CROMA COMPETITIVE INTELLIGENCE CHATBOT:
+
 This project implements a competitive intelligence chatbot for Croma, designed to analyze and compare business strategies, performance, and market positioning of competitors like Reliance Digital and Vijay Sales. The chatbot leverages advanced NLP models to provide insights from various sources including investor presentations, media reports, and annual reports.
 
 Project Overview
