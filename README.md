@@ -32,7 +32,9 @@ Clone the repository:
 bash
 Copy code
 git clone https://github.com/username/croma-chatbot.git
+
 cd croma-chatbot
+
 Install dependencies:
 
 bash
