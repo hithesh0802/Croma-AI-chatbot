@@ -36,6 +36,34 @@ def generate():
 def index():
     return render_template('index.html')
 
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    # Get the request data from Dialogflow
+    req = request.get_json(silent=True, force=True)
+    
+    # Extract the company parameter from the request using the @company_name entity
+    company = req.get('queryResult').get('parameters').get('company_name')
+    response_text = ""
+
+    # Conditional logic based on the company name
+    if company:
+        company = company.lower()  # Normalize the company name to lowercase
+        if company == 'reliance digital':
+            response_text = "Reliance Digital primarily sells through online channels, physical stores, and also engages in B2B sales."
+        elif company == 'vijay sales':
+            response_text = "Vijay Sales focuses heavily on online sales while maintaining a significant presence through physical stores across India."
+        elif company == 'aditya vision':
+            response_text = "Aditya Vision offers a balanced approach with a mix of online shopping and traditional retail outlets."
+        elif company == 'poojara':
+            response_text = "Poojara utilizes both physical stores and an online platform to cater to a diverse customer base."
+        elif company == 'bajaj electronics':
+            response_text = "Bajaj Electronics combines online sales and physical locations, aiming to provide comprehensive service to customers."
+        else:
+            response_text = "I'm not familiar with that company. Please ask about a specific organized electronics retailer."
+
+    # Create the response in the required format
+    return jsonify({'fulfillmentText': response_text})
+
 # Run the app
 if __name__ == "__main__":
     app.run(debug=True)
