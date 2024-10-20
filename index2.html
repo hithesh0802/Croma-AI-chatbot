@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croma Competitive Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #212121;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            color: #f0f0f0;
+            font-size: 1.2rem;
+        }
+
+        .chatbot-section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .chatbot-section h2 {
+            font-size: 2rem;
+            color: #212121;
+        }
+
+        .chatbot-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .chatbot-frame {
+            border: none;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 96%;
+            height: 430px;
+        }
+
+        footer {
+            background-color: #212121;
+            padding: 10px; /* Reduced padding for lower height */
+            text-align: center;
+            color: #f0f0f0;
+            font-size: 0.9rem;
+        }
+
+        /* footer p {
+            margin: 0;
+        } */
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .chatbot-frame {
+                width: 100%;
+                height: 450px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Croma AI Chatbot Interface</h1>
+        <p>Your personal assistant for smart insights, powered by Dialogflow.</p>
+    </header>
+
+    <main>
+        <section class="chatbot-section">
+            <div class="chatbot-container">
+                <iframe class="chatbot-frame" allow="microphone;"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/d117b90f-378c-4ba7-b984-a39e77315db4">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tech AI Chatbot | Powered by Dialogflow</p>
+    </footer>
+</body>
+</html>
